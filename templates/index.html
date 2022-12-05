@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Simple Beat Tracking </title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div id="audioContainer">
+        <h1>🥁 Simple Beat Tracking 🥁</h1>
+        <h3>Step 0: Read before Using</h3>
+            <div id = "instruction">
+            <p>This is an experimental feature that uses librosa's built-in beat tracking algorithm. Since the beat tracking algorithm is still under continuous optimization, the predicted results may not be completely accurate. We will continue to pay attention to the cutting-edge beat tracking algorithm and keep optimizing the product experience.</p>
+            <br>
+            <p>File requirements: Only .wav files are supported, and the recommended size is 16MB or less. If the size is exceeded, after you click "Submit", you may be redirected to a new page and told that the file size limit has been exceeded in order to protect the stability of the server. If you encounter this page, please revisit the home page link to resume use.<p>
+        </div>
+        <h3>Step 1: Upload an Audio</h3>
+        <form method="post" enctype="multipart/form-data">
+            <input id="upload" type="file" name="file" accept="audio/wave" required="required"/>
+            <br>
+            <br>
+            <h3>Step 2: Click "beatTracking"</h3>
+            <input class="btn" type="submit" id="submitButton" value="beatTracking" />
+        </form>
+
+        {% if beat_times != [] %}
+            <div id="audioResultContainer">
+                <br>
+                <h3>Step 3: Check the Result</h3>
+                <p class="plain">The estimated time stamps are:</p>
+                <p id="beatTimes">{{ beat_times }}</p>
+                <br>
+                <p class="plain">The estimated tempo is:</p>
+                <p id="tempo">{{ tempo }}</p>
+            </div>
+            <br>
+            <p class="plain">Audio wave combined with estimated beat: </p>
+            <img id="img0" src="{{ image }}" alt="my plot">
+        {% endif %}
+    </div>
+    <footer>
+        <p>©2022 Simple Beat Tracking. All Rights Reserved. Website Made by Yi Shan.</p>
+    </footer>
+
+</body>
+
+</html>

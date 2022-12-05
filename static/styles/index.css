@@ -1,0 +1,88 @@
+body{
+	background-color: #fff3e7;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+
+footer{
+  list-style-type: none;
+  margin: auto;
+  color: #4f443b;
+  font-size: 14px;
+}
+
+h1{
+	color:#292521;
+}
+
+h3{
+	color:#4f443b;
+}
+
+#instruction{
+	max-width: 40%;
+	margin: auto;
+	color: #a28b77;
+}
+
+#audioContainer{
+	text-align: center;
+	flex: 1;
+
+}
+
+#beatTimes{
+	color:#d2af8f;
+}
+
+#tempo{
+	color:#d2af8f;
+}
+
+#img0{
+	max-width: 100%;
+}
+
+.plain{
+	color:776758;
+}
+
+.btn{
+	background-color: #f0cbab;
+	border: none;
+	color: #ffffff;
+/*	width: 150px;*/
+	height: 50px;
+	text-align: center;
+	border-radius: 12px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	font-size: 16px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle
+
+}
+
+.btn:hover{
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+}
+
+ .input-file-button{
+	 padding: 6px 25px;
+	 background: #00bfff;
+	 border-radius: 4px;
+	 color: white;
+	 cursor: pointer;
+ }
+
+#upload{
+	font-size: 16px;
+	height: 50px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	vertical-align: middle
+}
