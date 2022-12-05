@@ -42,6 +42,7 @@ Please note that, due to the limitation of testing environments, this app was on
   ```
   flask --app app run
   ```
+  You should see the address. The default address should be: `http://127.0.0.1:5000/`.
   
   ## Questions?
   For any questions, please add [Issues](https://github.com/shanyi15/simpleBeatTracking/issues). 
