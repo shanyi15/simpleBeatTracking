@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, Response, session
 from werkzeug.utils import secure_filename
-import librosa, madmom
+import librosa
 import numpy as np
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
