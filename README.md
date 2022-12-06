@@ -1,6 +1,6 @@
-# README
+# simpleBeatTracking
 
-## Who am I?
+## Introduction
 This project uses python flask, librosa and front-end language to create a simple beat tracking app. 
 By uploading a piece of audio, user can get a figure annotated with predicted beat time stamps analyzed by algorithms through librosa. 
 
@@ -9,40 +9,40 @@ For better performance, it's recommended to upload music with strong and stable 
 ## Use it locally
 Please note that, due to the limitation of testing environments, this app was only tested on MacOS Ventura 13.0.1. 
 
-- Download and install Anaconda from [here](https://www.anaconda.com/products/distribution). If you successfully install Anaconda, you should see the conda list by run `conda list` command in your terminal.
-
-- Create env
-
-  under /simpleBeatTracking menu, create conda environment
+- Install virtualenv
 
   ```
-  conda env create -f environment.yml
+  pip install virtualenv
   ```
-
-  You should see "done" if you create the environment successfully. Then you can use
-
-  ```
-  conda-env list
-  ```
-
-  to check all of the environments. There should be a environment named "flask-test" in it.
 
 - Activate env
-
-  You can activate this environment by using
+  under /simpleBeatTracking menu, run the following command
 
   ```
-  conda activate flask-test
+  source ./bin/activate
   ```
 
-  If you activate the environment successfully, you should see `(flask-test)`.
+  If you activate the environment successfully, you should see `(venv)`.
+
+- Install requirement
+
+  ```
+  pip install -r requirement.txt
+  ```
+
+  If you install all of the requirement libraries succesfully, you should see the corresponding feedback from pip.
 
 - Run this app
 
   ```
   flask --app app run
   ```
-  You should see the address. The default address should be: `http://127.0.0.1:5000/`.
+  If you start the server successfully, you will see the address. The default address should be: `http://127.0.0.1:5000/`. If you want to run it on `localhost`, you can change the host option by:
+  ```
+  flask --app app run --host=0.0.0.0
+  ```
   
-  ## Questions?
+  ## Questions
   For any questions, please add [Issues](https://github.com/shanyi15/simpleBeatTracking/issues). 
+  
+  If you got the `cffi` package version error, you can try to solve it by [this](https://stackoverflow.com/questions/58552666/exception-version-mismatch-this-is-the-cffi-package-version-1-13-1).

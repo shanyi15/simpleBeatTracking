@@ -1,0 +1,3 @@
+#!/Users/shanyi/Desktop/beatTracking/venv/bin/python
+from numba.pycc import main
+main()
